@@ -6,7 +6,11 @@
 
 ```
 const isUser = require('is-user');
-const userArr = ['user', 'admin', 'manager', 'superadmin', 'ceo'];
-let isAdmin =  isUser.is(userArr, 'admin'); //true
-let isManager = isUser.is(userArr, 'manager'); //true
+export.update = function(req, res){
+    //chaching the roles for future use in this function"
+    const userArr = ['user', 'admin', 'manager', 'superadmin', 'ceo'];
+    isUser.cache(userArr);
+    let isAdmin =  isUser.is('admin'); //true
+    let isManager = isUser.is('manager'); //true
+}
 ```
