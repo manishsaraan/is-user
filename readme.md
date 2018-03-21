@@ -1,45 +1,11 @@
-# <%= moduleName %> [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= moduleName %>)
+## Is-User
 
->
+#An utility to check if a role is assigned to an user.
 
-
-## Install
+#How to use
 
 ```
-$ npm install <%= moduleName %>
+const isUser = require('is-user');
+let isAdmin =  isUser.is('admin'); //true
+let isManager = isUser.is('manager'); //true
 ```
-
-
-## Usage
-
-```js
-const <%= camelModuleName %> = require('<%= moduleName %>');
-
-<%= camelModuleName %>('unicorns');
-//=> 'unicorns & rainbows'
-```
-
-
-## API
-
-### <%= camelModuleName %>(input, [options])
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-##### foo
-
-Type: `boolean`<br>
-Default: `false`
-
-Lorem ipsum.
-
-
-## License
-
-MIT © [<%= name %>](https://github.com/<%= githubUsername %>)
