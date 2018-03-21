@@ -1,11 +1,20 @@
 'use strict';
 
-const is = (userArr, input) => {
+const isUser = function () {
+	const is = function (input) {
+		const inputLowerCase = input.toLowerCase();
+		return this.roles.includes(inputLowerCase);
+	};
 
-	const inputLowerCase = input.toLowerCase();
-	const userArrLowerCase = userArr.map( item => item.toLowerCase());
-	return userArrLowerCase.includes(inputLowerCase);
+	const cache = function (roles) {
+		const userArrLowerCase = roles.map(item => item.toLowerCase());
+		this.roles = userArrLowerCase;
+		return this.roles;
+	};
+
+	return {
+		is,
+		cache
+	};
 };
-module.exports = {
-	is
-};
+module.exports = isUser();
