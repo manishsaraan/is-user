@@ -6,6 +6,7 @@
 
 ```
 const isUser = require('is-user');
-let isAdmin =  isUser.is('admin'); //true
-let isManager = isUser.is('manager'); //true
+const userArr = ['user', 'admin', 'manager', 'superadmin', 'ceo'];
+let isAdmin =  isUser.is(userArr, 'admin'); //true
+let isManager = isUser.is(userArr, 'manager'); //true
 ```

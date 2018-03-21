@@ -1,8 +1,10 @@
 'use strict';
-const userArr = ['user', 'admin', 'manager', 'superadmin', 'ceo'];
-const is = input => {
+
+const is = (userArr, input) => {
+
 	const inputLowerCase = input.toLowerCase();
-	return userArr.includes(inputLowerCase);
+	const userArrLowerCase = userArr.map( item => item.toLowerCase());
+	return userArrLowerCase.includes(inputLowerCase);
 };
 module.exports = {
 	is
