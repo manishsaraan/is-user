@@ -6,7 +6,7 @@
   "repository": "https://github.com/manishsaraan/is-user.git",
   "author": "“manishsaraan” <“manish021js@gmail.com”> (http://www.manishsaraan.com/)",
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "main": "dist/index.js",
   "scripts": {
