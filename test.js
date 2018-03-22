@@ -1,5 +1,5 @@
-import {expect} from 'chai';
-import m from './index.js';
+const expect = require('chai').expect;
+const m = require('.');
 
 
 const userArr = ['user', 'admin', 'manager', 'superadmin', 'ceo'];
